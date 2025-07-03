@@ -26,6 +26,13 @@ nav ul {
 nav ul li {
   margin: 0 20px;
 }
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    line-height: 1.6;
+}
 
 nav ul li a {
   color: white;
