@@ -14,6 +14,31 @@
     document.body.innerHTML = "<h1 style='color: white; text-align: center; margin-top: 50px;'>Access Denied 🚫</h1>";
   }
 </script>
+<img src="47347.jpg" alt="Anime 1" width="300" onclick="playVideo('video1')">
+<img src="87048.jpg" alt="Anime 2" width="300" onclick="playVideo('video2')">
+
+<div id="video1" style="display:none; margin-top:20px;">
+  <video width="640" controls>
+    <source src="attack_on_titan.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div id="video2" style="display:none; margin-top:20px;">
+  <video width="640" controls>
+    <source src="your_name.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+  function playVideo(id) {
+    // hide all video sections
+    document.getElementById("video1").style.display = "none";
+    document.getElementById("video2").style.display = "none";
+    // show the selected one
+    document.getElementById(id).style.display = "block";
+  }
+</script>
+
 
     <header>
         <h1>Anime Info Hub</h1>
