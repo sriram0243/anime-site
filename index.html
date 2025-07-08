@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Info Hub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Anime Info Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .anime-card {
+      margin-bottom: 30px;
+    }
+    .anime-card img {
+      width: 250px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .anime-card img:hover {
+      transform: scale(1.05);
+    }
+    .video-container {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-<script>
-  var answer = prompt("Are you a human? Type YES to continue:");
 
-  if (answer === null || answer.toUpperCase() !== "YES") {
-    document.body.innerHTML = "<h1 style='color: white; text-align: center; margin-top: 50px;'>Access Denied 🚫</h1>";
-  }
-</script>
+  <header>
+    <h1>Anime Info Hub</h1>
+  </header>
 
-    <header>
-        <h1>Anime Info Hub</h1>
-        <nav>
-            <a href="#popular">Popular Anime</a>
-            <a href="#about">About</a>
-        </nav>
-    </header>
+  <section id="popular">
+    <h2>Favourite Anime</h2>
 
-</script>
-<img src="slime.jpg" alt="That Time I got Reincarnate As A Slime" width="300" onclick="playVideo('video1')">
-<img src="your name.jpg"alt="Your Name" width="300" onclick="playVideo('video2')">
+    <div class="anime-card">
+      <h3>Your Name</h3>
+      <img src="your name.jpg" alt="Your Name" onclick="playVideo('video1')">
+      <div id="video1" class="video-container">
+        <video width="640" controls>
+          <source src="your_name.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
 
-<div id="video1" style="display:none; margin-top:20px;">
-  <video width="640" controls>
-    <source src="my video.mp4" type="video/mp4">
-  </video>
-</div>
+    <div class="anime-card">
+      <h3>That Time I got Reincarnate As A Slime</h3>
+      <img src="slime.jpg" alt="That Time I got Reincarnate As A Slime" onclick="playVideo('video2')">
+      <div id="video2" class="video-container">
+        <video width="640" controls>
+          <source src="my video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
 
-<div id="video2" style="display:none; margin-top:20px;">
-  <video width="640" controls>
-    <source src="your_name.mp4" type="video/mp4">
-  </video>
-</div>
+  </section>
 
-<script>
-  function playVideo(id) {
-    // hide all video sections
-    document.getElementById("video1").style.display = "none";
-    document.getElementById("video2").style.display = "none";
-    // show the selected one
-    document.getElementById(id).style.display = "block";
-  }
-</script>
+  <footer>
+    <p>&copy; 2025 Sri Ram</p>
+  </footer>
 
-    <section id="about">
+  <script>
+    function playVideo(id) {
+      // Hide all video containers first
+      var videos = document.querySelectorAll('.video-container');
+      videos.forEach(function(video) {
+        video.style.display = "none";
+      });
+      // Show the selected one
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+<section id="about">
         <h2>About This Site</h2>
         <p>This site shares information about top anime series. Created by Sri Ram for anime lovers.</p>
     </section>
@@ -59,5 +81,3 @@
     </footer>
 </body>
 </html>
-
-  
