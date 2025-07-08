@@ -13,17 +13,28 @@
   if (answer === null || answer.toUpperCase() !== "YES") {
     document.body.innerHTML = "<h1 style='color: white; text-align: center; margin-top: 50px;'>Access Denied 🚫</h1>";
   }
-</script>
-<img src="47347.jpg" alt="Anime 1" width="300" onclick="playVideo('video1')">
-<img src=""https://cdn.myanimelist.net/images/anime/5/87048.jpg"" alt="Anime 2" width="300" onclick="playVideo('video2')">
 
-<div id="video1" style="display:none; margin-top:20px;">
+
+
+    <header>
+        <h1>Anime Info Hub</h1>
+        <nav>
+            <a href="#popular">Popular Anime</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+</script>
+<img src="slime.jpg" alt="That Time I got Reincarnate As A Slime" width="300" onclick="playVideo('my video.mp4')">
+<img src="your name.jpg"alt="Your Name" width="300" onclick="playVideo('your_name.mp4')">
+
+<div id="my video.mp4" style="display:none; margin-top:20px;">
   <video width="640" controls>
-    <source src="attack_on_titan.mp4" type="video/mp4">
+    <source src="my video.mp4" type="video/mp4">
   </video>
 </div>
 
-<div id="video2" style="display:none; margin-top:20px;">
+<div id="your_name.mp4" style="display:none; margin-top:20px;">
   <video width="640" controls>
     <source src="your_name.mp4" type="video/mp4">
   </video>
@@ -39,29 +50,6 @@
   }
 </script>
 
-
-    <header>
-        <h1>Anime Info Hub</h1>
-        <nav>
-            <a href="#popular">Popular Anime</a>
-            <a href="#about">About</a>
-        </nav>
-    </header>
-
-    <section id="popular">
-        <h2>Popular Anime</h2>
-        <div class="anime-card">
-            <img src="https://cdn.myanimelist.net/images/anime/10/47347.jpg" alt="Attack on Titan">
-            <h3>Attack on Titan</h3>
-            <p>A dark fantasy anime series where humanity fights giant humanoid creatures called Titans.</p>
-        </div>
-        <div class="anime-card">
-            <img src="https://cdn.myanimelist.net/images/anime/5/87048.jpg" alt="your Name">
-            <h3>your Name</h3>
-            <p>A world where people are born with superpowers called Quirks and follow aspiring heroes.</p>
-        </div>
-    </section>
-
     <section id="about">
         <h2>About This Site</h2>
         <p>This site shares information about top anime series. Created by Sri Ram for anime lovers.</p>
@@ -71,10 +59,6 @@
         <p>&copy; 2025 Sri Ram</p>
     </footer>
     <h2>Watch Anime Clip</h2>
-<video width="640" height="360" controls>
-  <source src="my video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 </body>
 </html>
 
