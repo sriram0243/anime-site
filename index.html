@@ -34,7 +34,7 @@
 
     <div class="anime-card">
       <h3>Your Name</h3>
-      <img src="your name.jpg" alt="Your Name" onclick="playVideo('video1')">
+      <img src="your name.jpg" alt="Your Name"  width="250" onclick="toggleVideo('video1')">
       <br>
   <a href="https://myanimelist.net/anime/32281/Kimi_no_Na_wa" target="_blank" class="mal-link">View on MyAnimeList</a>
 </div>
@@ -80,17 +80,28 @@
     <p>&copy; 2025 Sri Ram</p>
   </footer>
 
-  <script>
-    function playVideo(id) {
-      // Hide all video containers first
+<script>
+  function toggleVideo(id) {
+    var videoDiv = document.getElementById(id);
+
+    // If it's currently displayed, hide it
+    if (videoDiv.style.display === "block") {
+      videoDiv.style.display = "none";
+    } 
+    // If it's hidden, show it and hide others
+    else {
+      // First, hide all other videos
       var videos = document.querySelectorAll('.video-container');
-      videos.forEach(function(video) {
-        video.style.display = "none";
+      videos.forEach(function(div) {
+        div.style.display = "none";
       });
-      // Show the selected one
-      document.getElementById(id).style.display = "block";
+
+      // Then show the selected video
+      videoDiv.style.display = "block";
     }
-  </script>
+  }
+</script>
+
 <section id="about">
         <h2>About This Site</h2>
         <p>This site shares information about top anime series. Created by Sri Ram for anime lovers.</p>
